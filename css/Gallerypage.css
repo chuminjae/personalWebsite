@@ -1,0 +1,367 @@
+body {
+  margin: 0;
+}
+/*Header elements*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.headerElements {
+  display: grid;
+  grid-template-columns: 50px 1fr 180px;
+  align-items: center;
+}
+
+.choosetab {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.tab a {
+  font-family: "Inknut Antiqua", sans-serif;
+  margin-right: 1rem;
+  color: black;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab.active a {
+  color: #d78c3f;
+}
+
+.tab a:hover {
+  color: #f0ad6e;
+  border-bottom: 2px solid #d1874a;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.contact-icon img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.contact-icon {
+  margin-right: 16px;
+}
+
+/* 반응형: 화면 폭 768px 이하 */
+@media screen and (max-width: 768px) {
+  .headerElements {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .choosetab {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .tab {
+    margin-bottom: 5px;
+  }
+
+  .tab a {
+    font-size: 14px;
+  }
+
+  .contact {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  .contact-icon {
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+/* 모바일: 화면 폭 480px 이하 */
+@media screen and (max-width: 480px) {
+  .tab a {
+    font-size: 12px;
+    margin-right: 0.5rem;
+  }
+
+  .contact-icon img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+.slider {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.slider .list .albums {
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.slider .list .albums .background {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.slider .footer {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  z-index: 100;
+  font-size: 9px;
+}
+.slider .list .albums .content {
+  z-index: 1;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 10%;
+  left: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider .list .albums .content .album {
+  width: 15%;
+  height: 53%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가로 중앙정렬 */
+  justify-content: flex-start; /* frame은 위, description은 아래 */
+}
+.link {
+  width: 100%;
+  height: 100%;
+}
+.slider .list .albums .content .album .frame {
+  width: 100%;
+  height: 96%;
+  border: 8px ridge #bfa76f;
+  background: linear-gradient(145deg, #c9b47a, #9e8c5a);
+  position: relative;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3),
+    0 3px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.6s ease-in-out;
+  overflow: hidden;
+  z-index: 100;
+}
+.slider .list .albums .content .album .frame:hover {
+  transform: scale(1.02);
+  border-color: #e4cf95;
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.4),
+    0 10px 25px rgba(0, 0, 0, 0.6), 0 -4px 12px rgba(255, 240, 200, 0.3);
+  filter: brightness(1.1) contrast(1.05);
+}
+.slider .list .albums .content .album .frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255, 255, 255, 0.25),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.slider .list .albums .content .album .frame:hover::after {
+  opacity: 1;
+}
+.slider .list .albums .content .album .albumcover {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.slider .list .albums .content .album .description {
+  text-align: center;
+  font-family: "Inknut Antiqua", serif;
+  color: black;
+  padding: 0;
+  line-height: 1.5;
+}
+.slider .list .albums.active {
+  opacity: 1;
+  z-index: 10;
+  pointer-events: all;
+}
+.slider .arrows {
+  position: absolute;
+  top: 61%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.container {
+  position: absolute;
+  width: 10rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  bottom: 18%;
+  left: 10%;
+}
+.slider .arrows .prev {
+  pointer-events: all;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: black;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 1000;
+  margin-left: 4rem;
+  border-radius: 100px;
+}
+.slider .arrows .next {
+  pointer-events: all;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: black;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 1000;
+  margin-right: 4rem;
+  border-radius: 100px;
+}
+@keyframes showContentSmooth {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-5px); /* 살짝 올라갔다가 */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* background - 가장 먼저, 느리게 */
+.slider .list .albums.active .background {
+  animation: showContentSmooth 0.7s ease-out 0s forwards;
+}
+
+/* container - background와 살짝 겹치게 등장, 블러 없음 */
+.slider .albums.active .container {
+  transform: translateY(0);
+  opacity: 0;
+  animation: showContentSmooth 0.6s ease-out 0.2s forwards;
+}
+
+/* album frame - container와 살짝 겹치면서 등장 */
+.slider .list .albums.active .content .album .frame {
+  transform: translateY(0);
+  opacity: 0;
+  animation: showContentSmooth 0.5s ease-out 0.4s forwards;
+}
+
+/* description - frame과 살짝 겹치면서 등장 */
+.slider .list .albums.active .content .album .description {
+  transform: translateY(0);
+  opacity: 0;
+  animation: showContentSmooth 0.5s ease-out 0.55s forwards;
+}
+svg {
+  width: 100%;
+}
+
+#front-leg {
+  animation: leg-kick 1s ease-in-out alternate infinite;
+  transform-origin: 90% 75%;
+}
+
+#back-leg {
+  animation: leg-kick 1s ease-in-out alternate infinite;
+  animation-delay: 0.5s;
+  transform-origin: 90% 75%;
+}
+
+@keyframes leg-kick {
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes you-zoom {
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+/* SVG Styles (pulled from <style> of SVG) */
+.cls-1 {
+  fill: #ff00cf;
+}
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6 {
+  stroke: #000;
+}
+.cls-1,
+.cls-2,
+.cls-4,
+.cls-5,
+.cls-6 {
+  stroke-width: 3px;
+}
+.cls-1,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6 {
+  stroke-miterlimit: 10;
+}
+.cls-7 {
+  fill: #f0c;
+}
+.cls-8,
+.cls-2 {
+  fill: #fff;
+}
+.cls-2 {
+  stroke-linejoin: round;
+}
+.cls-4 {
+  stroke-linecap: round;
+}
+.cls-4,
+.cls-6 {
+  fill: none;
+}
+/* End SVG Styles (pulled from <style> of SVG) */

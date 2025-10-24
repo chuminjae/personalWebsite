@@ -1,0 +1,86 @@
+body {
+  background: #1e1e2f;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.headerElements {
+  display: grid;
+  grid-template-columns: 50px 1fr 180px;
+  align-items: center;
+}
+.choosetab {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  align-items: center;
+  margin-left: 25px;
+}
+.tab a {
+  font-family: "Inknut Antiqua", sans-serif;
+  color: #d8dee9;
+  transition: color 0.3s, border-bottom 0.3s;
+  margin-right: 1rem;
+}
+.tab.active a {
+  color: #ffd479;
+}
+.tab a:hover {
+  color: #79c0ff;
+  border-bottom: 2px solid #79c0ff;
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 25px;
+}
+.contact-icon {
+  margin-right: 16px;
+}
+.contact-icon img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.editor {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.main-element {
+  margin-top: 5%;
+}
+.info {
+  margin-bottom: 1%;
+  padding: 0 2rem;
+}
+.title {
+  font-size: 2rem;
+  color: #ffd479;
+}
+.date {
+  font-size: 1rem;
+  color: #888ca3;
+}
+.content {
+  padding: 0 2rem;
+}
+.content p {
+  color: #d8dee9;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+.content strong {
+  color: #79c0ff;
+}

@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #28223f;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  margin-top: 10%;
+}
+.text {
+  font-weight: 100;
+  font-size: 48px; /* 키움 */
+  color: #fafafa;
+  position: relative;
+  z-index: 10; /* canvas 위로 나오게 */
+}
+.dud {
+  color: #fafafa; /* 더 밝게 */
+}
+h3 {
+  margin: 10px 0;
+}
+
+h6 {
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 14px;
+  line-height: 21px;
+}
+.contact-icon img {
+  width: 20px;
+  height: 20px;
+}
+.test {
+  position: absolute;
+  left: 40%;
+  top: 10%;
+}
+.card-container {
+  background-color: transparent;
+  color: #b3b8cd;
+  padding-top: 30px;
+  position: relative;
+  max-width: 100%;
+  width: 350px;
+  text-align: center;
+  z-index: 2000;
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+.card-container .pro {
+  color: #231e39;
+  background-color: #febb0b;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.card-container .round {
+  border: 1px solid #03bfcb;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+button.primary {
+  background-color: #03bfcb;
+  border: 1px solid #03bfcb;
+  border-radius: 3px;
+  color: #231e39;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #02899c;
+}
+.skills {
+  background-color: #1f1a36;
+  text-align: left;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.skills ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills ul li {
+  border: 1px solid #2d2747;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
+} /* 기본 헤더 스타일 (데스크톱) */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.headerElements {
+  display: grid;
+  grid-template-columns: 50px 1fr 180px;
+  align-items: center;
+}
+
+.choosetab {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  align-items: center;
+  margin: 20px;
+  margin-left: 25px;
+}
+
+.tab a {
+  font-family: "Inknut Antiqua", sans-serif;
+  margin-right: 1rem;
+  color: #ff7f50;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab.active a {
+  color: #a8a2c1;
+}
+
+.tab a:hover {
+  color: #5eead4;
+  border-bottom: 2px solid white;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.contact-icon {
+  margin-right: 16px;
+}
+.contact-icon img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* 반응형: 화면 폭 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  .headerElements {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .choosetab {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .tab {
+    margin-bottom: 5px;
+  }
+
+  .tab a {
+    font-size: 14px; /* 모바일에서는 글자 줄이기 */
+  }
+
+  .contact {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  .contact-icon {
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+/* 작은 화면: 화면 폭 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  .tab a {
+    font-size: 12px;
+    margin-right: 0.5rem;
+  }
+
+  .contact-icon img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.footer {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  z-index: 10000;
+  font-size: 9px;
+}

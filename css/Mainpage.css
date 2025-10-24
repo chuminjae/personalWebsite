@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  color: white;
+  font-family: "Inknut Antiqua", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+} /* 기본 헤더 스타일 (데스크톱) */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.headerElements {
+  display: grid;
+  grid-template-columns: 50px 1fr 180px;
+  align-items: center;
+}
+
+.choosetab {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.tab a {
+  font-family: "Inknut Antiqua", sans-serif;
+  margin-right: 1rem;
+  color: black;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab.active a {
+  color: white;
+}
+
+.tab a:hover {
+  color: #ff7f50;
+  border-bottom: 2px solid #ff7f50;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.contact-icon {
+  margin-right: 16px;
+}
+.contact-icon img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* 반응형: 화면 폭 768px 이하 */
+@media screen and (max-width: 768px) {
+  .headerElements {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .choosetab {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .tab {
+    margin-bottom: 5px;
+  }
+
+  .tab a {
+    font-size: 14px;
+  }
+
+  .contact {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  .contact-icon {
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+/* 모바일: 화면 폭 480px 이하 */
+@media screen and (max-width: 480px) {
+  .tab a {
+    font-size: 12px;
+    margin-right: 0.5rem;
+  }
+
+  .contact-icon img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.slider {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+/* .slider 기준으로 정렬 */
+.slider .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+/* .item의 width height 다 채우기 */
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+/* after로 gradient만들고 img 덮어 쓰기 */
+.slider .list .item::after {
+  content: "© 2025 Minjae Chu. All rights reserved.";
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, #000 40%, transparent);
+  display: flex;
+  align-items: flex-end;
+  font-size: 9px;
+}
+/* 안에 content 정렬  부모기준 80프로 안넘게*/
+.slider .list .item .content {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 500px;
+  max-width: 80%;
+  z-index: 1;
+}
+/* 첫번째 p element */
+.slider .list .item .content p:nth-child(1) {
+  letter-spacing: 10px;
+}
+.slider .list .item .content h2 {
+  font-size: 100px;
+  margin: 0;
+}
+.slider .list .item.active {
+  opacity: 1;
+  z-index: 10;
+}
+@keyframes showContent {
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3) {
+  transform: translateY(30px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2 {
+  animation-delay: 1s;
+}
+.slider .list .item.active p:nth-child(3) {
+  animation-duration: 1.2s;
+}

@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(217, 217, 217, 1);
+  font-family: "Inknut Antiqua", sans-serif;
+  display: flex;
+  min-height: 100vh;
+}
+/*Header elements*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.headerElements {
+  display: grid;
+  grid-template-columns: 50px 1fr 180px;
+  align-items: center;
+}
+.choosetab {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  align-items: center;
+  margin-left: 25px;
+}
+.tab a {
+  font-family: "Inknut Antiqua", sans-serif;
+  margin-right: 1rem;
+  color: #2e2e2e; /* 약간 부드러운 다크 그레이 */
+  transition: color 0.3s, border-bottom 0.3s;
+}
+.tab.active a {
+  color: #6c63ff;
+}
+.tab a:hover {
+  color: #ff7b00;
+  border-bottom: 2px solid #ff7b00;
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 25px;
+}
+.contact-icon {
+  margin-right: 16px;
+}
+.contact-icon img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.main-element .gallery {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.5rem;
+}
+.gallery .grid {
+  width: 100%;
+}
+.pageInfo {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  font-size: 2vw;
+}
+/* 현재 브라우저의 크기 확인후 나누기 4에서 빼기 몇정도를 width로 설정.*/
+.grid-item {
+  margin-bottom: 0.5rem;
+}
+.grid-sizer,
+.grid-item {
+  /*making 4 column considering gutter*/
+  width: 25%;
+  /* grid-item안에 그냥 padding 줘버려*/
+  /*width = content + padding + border 포함*/
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+}
+/*grid-item안에 있는 img가 grid item의 width 100프로 차지*/
+.grid-item img {
+  width: 100%;
+  display: block;
+}
+.gallery .grid .grid-item img:hover {
+  transform: scale(1.02);
+}
+.main-element {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  flex: 1;
+}
+.AlbumInfo {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  font-family: sans-serif;
+  width: 97%;
+}
+.AlbumInfo .title {
+  font-size: 5vw;
+}
+.main-element .footer {
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  font-size: 9px;
+}
+.man1 {
+  position: absolute;
+  right: 3%;
+  height: 8rem;
+  width: 8rem;
+  top: 1%;
+}
+.man2 {
+  position: absolute;
+  right: 6%;
+  height: 8rem;
+  width: 8rem;
+  top: 1%;
+}
+.man3 {
+  position: absolute;
+  right: 9%;
+  height: 8rem;
+  width: 8rem;
+  top: 1%;
+}
+.cls-1,
+.cls-10,
+.cls-8 {
+  fill: #cd4d41;
+}
+
+.cls-1,
+.cls-3,
+.cls-7 {
+  stroke: #b83b2a;
+}
+
+.cls-1,
+.cls-10,
+.cls-11,
+.cls-12,
+.cls-13,
+.cls-3,
+.cls-4,
+.cls-7 {
+  stroke-miterlimit: 10;
+}
+
+.cls-2 {
+  fill: url(#radial-gradient);
+}
+
+.cls-11,
+.cls-12,
+.cls-13,
+.cls-3,
+.cls-7 {
+  fill: none;
+}
+
+.cls-4 {
+  fill: #1c3b6a;
+  stroke: #102139;
+}
+
+.cls-5 {
+  fill: #e39f92;
+}
+
+.cls-6 {
+  fill: #b83b2a;
+}
+
+.cls-13,
+.cls-7 {
+  stroke-linecap: round;
+}
+
+.cls-9 {
+  fill: url(#radial-gradient-2);
+}
+
+.cls-10 {
+  stroke: #b73928;
+}
+
+.cls-11 {
+  stroke: #b73b2b;
+  stroke-width: 1.29px;
+}
+.cls-12,
+.cls-13 {
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+.cls-14 {
+  fill: #8d512d;
+}
+
+.cls-15 {
+  fill: url(#radial-gradient-3);
+}
+
+.cls-16 {
+  fill: #90ba73;
+}

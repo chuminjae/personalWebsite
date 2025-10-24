@@ -1,0 +1,89 @@
+body {
+  background: #0a192f;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.headerElements {
+  display: grid;
+  grid-template-columns: 50px 1fr 180px;
+  align-items: center;
+}
+.choosetab {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  align-items: center;
+  margin-left: 25px;
+}
+.tab a {
+  font-family: "Inknut Antiqua", sans-serif;
+  margin-right: 1rem;
+  color: #e6f1ff; /* 기본 텍스트 */
+  transition: color 0.3s, border-bottom 0.3s;
+}
+.tab.active a {
+  color: #64ffda; /* 민트 포인트 */
+  border-bottom: 2px solid #64ffda;
+}
+
+.tab a:hover {
+  color: #5eead4; /* 밝은 민트 하이라이트 */
+  border-bottom: 2px solid #5eead4;
+  padding-bottom: 2px;
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 25px;
+}
+.contact-icon {
+  margin-right: 16px;
+}
+.contact-icon img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.editor {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.main-element {
+  margin-top: 5%;
+}
+.info {
+  margin-bottom: 1%;
+  padding: 0 2rem;
+}
+.title {
+  font-size: 2rem;
+  color: #a78bfa;
+}
+.date {
+  font-size: 1rem;
+  color: #94a3b8;
+}
+.content {
+  padding: 0 2rem;
+}
+.content p {
+  color: #e6f1ff;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+.content strong {
+  color: #00bfff;
+}
