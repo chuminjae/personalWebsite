@@ -4,7 +4,7 @@ function renderMainPage() {
   document.querySelector(".main-element").innerHTML = `<div class="slider">
         <div class="list">
           <div class="item active">
-            <img src="images/Mainpage/Profilepagebackground.jpg" />
+            <img src="../images/Mainpage/Profilepagebackground.jpg" />
             <a href="Profilepage.html" rel="noopener noreferrer">
               <div class="content">
                 <p>page 1</p>
@@ -15,7 +15,7 @@ function renderMainPage() {
           </div>
           <div class="item">
             <img
-              src="images/Mainpage/teletubbies_wallpaper_1_by_gikesmanners1995_dk2c9yh-fullview.jpg"
+              src="../images/Mainpage/teletubbies_wallpaper_1_by_gikesmanners1995_dk2c9yh-fullview.jpg"
             />
             <a href="Projectpage.html" rel="noopener noreferrer">
               <div class="content">
@@ -26,7 +26,7 @@ function renderMainPage() {
             </a>
           </div>
           <div class="item">
-            <img src="images/Mainpage/Algorithmpagebackground.jpg" />
+            <img src="../images/Mainpage/Algorithmpagebackground.jpg" />
             <a href="Algorithmpage.html" rel="noopener noreferrer">
               <div class="content">
                 <p>page 3</p>
@@ -36,7 +36,7 @@ function renderMainPage() {
             </a>
           </div>
           <div class="item">
-            <img src="images/Mainpage/Gallerypagebackground.jpg" />
+            <img src="../images/Mainpage/Gallerypagebackground.jpg" />
             <a href="Gallerypage.html" rel="noopener noreferrer">
               <div class="content">
                 <p>page 4</p>

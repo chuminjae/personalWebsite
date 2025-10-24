@@ -336,13 +336,13 @@ function renderGallery() {
       itemActive = i;
       galleryHTML += `<div class="albums active">${needContainer(
         PageInfo
-      )}<img class="background" src="images/Gallerypage/background.png" /> <div class="content">${renderGalleryElements(
+      )}<img class="background" src="../images/Gallerypage/background.png" /> <div class="content">${renderGalleryElements(
         PageGContent
       )}</div></div> `;
     } else {
       galleryHTML += `<div class="albums">${needContainer(
         PageInfo
-      )}<img class="background" src="images/Gallerypage/background.png" /> <div class="content">${renderGalleryElements(
+      )}<img class="background" src="../images/Gallerypage/background.png" /> <div class="content">${renderGalleryElements(
         PageGContent
       )}</div></div> `;
     }
@@ -357,7 +357,7 @@ function renderGalleryElements(albums) {
                 <a href="Albumpage.html?albumId=${album.id}" class="link">
                   <div class="frame">
                     <img
-                      src="images/Gallerypage/${album.albumCover}"
+                      src="../images/Gallerypage/${album.albumCover}"
                       class="albumcover"
                     />
                   </div>

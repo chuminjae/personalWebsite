@@ -1286,7 +1286,7 @@ function renderAlbumpage() {
 function renderAlbumImages(PageAContent) {
   let AlbumImagesHTML = ``;
   for (let i = 0; i < PageAContent.images.length; i++) {
-    AlbumImagesHTML += `<div class="grid-item"><img src="images/Albumpage/${PageAContent.images[i]}" /></div>`;
+    AlbumImagesHTML += `<div class="grid-item"><img src="../images/Albumpage/${PageAContent.images[i]}" /></div>`;
   }
   return AlbumImagesHTML;
 }

@@ -295,7 +295,7 @@ function renderProfilePage() {
           ".test"
         ).innerHTML = `<div class="card-container">
         <span class="pro">PRO</span>
-        <img class="round" src="images/Profilepage/profile.png" />
+        <img class="round" src="../images/Profilepage/profile.png" />
         <h3>Minjae Chu</h3>
         <h6>Kr Sg</h6>
         <p>

@@ -204,9 +204,9 @@ function renderMainHeader() {
           </div>
         </div>
         <div class="title-header">
-          <img src="images/Projectpage/game.png" class="logo" />
+          <img src="../images/Projectpage/game.png" class="logo" />
           <a class="title">Projects</a>
-          <img src="images/Projectpage/game.png" class="logo" />
+          <img src="../images/Projectpage/game.png" class="logo" />
         </div>
         <div class="heart">
           <button class="particleButton">
@@ -260,7 +260,7 @@ function renderContentsPage() {
   }
   filteredContents.forEach((content) => {
     contentsHTML += `<div class="problem-container">
-             <div class="upperpart"><a href="${content.link1}" target="_blank"><img src="images/Projectpage/${content.type}" />
+             <div class="upperpart"><a href="${content.link1}" target="_blank"><img src="../images/Projectpage/${content.type}" />
              </a></div>
              <div class="lowerpart">
                <a href="Projectexplanationpage.html?ProjectId=${content.id}">
@@ -269,7 +269,7 @@ function renderContentsPage() {
                    ${content.title}
                  </div>
                  <div class="problem-difficulty">
-                   <img src="images/Projectpage/difficulty/difficulty${content.difficulty}.png" />
+                   <img src="../images/Projectpage/difficulty/difficulty${content.difficulty}.png" />
                  </div>
                </div>
                <div class="problem-tag">

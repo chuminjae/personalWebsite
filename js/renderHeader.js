@@ -27,7 +27,7 @@ export function renderHeader1(currentTab) {
             href="https://www.instagram.com/c_vgvrthrg"
             target="_blank"
             rel="noopener noreferrer"
-            ><img src="images/icons/InstagramIcon.png" alt="Instagram"
+            ><img src="../images/icons/InstagramIcon.png" alt="Instagram"
           /></a>
         </div>
         <div class="mail contact-icon">
@@ -35,7 +35,7 @@ export function renderHeader1(currentTab) {
             href="mailto:chuminjae@outlook.com"
             target="_blank"
             rel="noopener noreferrer"
-            ><img src="images/icons/MailIcon.png" alt="Mail"
+            ><img src="../images/icons/MailIcon.png" alt="Mail"
           /></a>
         </div>
         <div class="github contact-icon">
@@ -43,7 +43,7 @@ export function renderHeader1(currentTab) {
             href="https://github.com/chuminjae"
             target="_blank"
             rel="noopener noreferrer"
-            ><img src="images/icons/GithubIcon.png" alt="Github"
+            ><img src="../images/icons/GithubIcon.png" alt="Github"
           /></a>
         </div>
         <div class="smile contact-icon">
@@ -52,7 +52,7 @@ export function renderHeader1(currentTab) {
             alt="Blog"
             target="_blank"
             rel="noopener noreferrer"
-            ><img src="images/icons/SmileIcon.png"
+            ><img src="../images/icons/SmileIcon.png"
           /></a>
         </div>
       </div>
@@ -86,7 +86,7 @@ export function renderHeader2(currentTab) {
               href="https://www.instagram.com/c_vgvrthrg"
               target="_blank"
               rel="noopener noreferrer"
-              ><img src="images/icons/instagram.png" alt="Instagram"
+              ><img src="../images/icons/instagram.png" alt="Instagram"
             /></a>
           </div>
           <div class="mail contact-icon">
@@ -94,7 +94,7 @@ export function renderHeader2(currentTab) {
               href="mailto:chuminjae@outlook.com"
               target="_blank"
               rel="noopener noreferrer"
-              ><img src="images/icons/mail.png" alt="Mail"
+              ><img src="../images/icons/mail.png" alt="Mail"
             /></a>
           </div>
           <div class="github contact-icon">
@@ -102,7 +102,7 @@ export function renderHeader2(currentTab) {
               href="https://github.com/chuminjae"
               target="_blank"
               rel="noopener noreferrer"
-              ><img src="images/icons/github.png" alt="Github"
+              ><img src="../images/icons/github.png" alt="Github"
             /></a>
           </div>
           <div class="smile contact-icon">
@@ -111,7 +111,7 @@ export function renderHeader2(currentTab) {
               alt="Blog"
               target="_blank"
               rel="noopener noreferrer"
-              ><img src="images/icons/smile.png"
+              ><img src="../images/icons/smile.png"
             /></a>
           </div>
         </div>

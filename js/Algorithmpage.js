@@ -101,9 +101,9 @@ function renderMainHeader() {
           <div class="base"></div>
         </div>
         <div class="title-header">
-          <img src="images/Algorithmpage/logo.png" class="logo" />
+          <img src="../images/Algorithmpage/logo.png" class="logo" />
           <a class="title">Algorithms</a>
-          <img src="images/Algorithmpage/logo.png" class="logo" />
+          <img src="../images/Algorithmpage/logo.png" class="logo" />
         </div>
         <div class="dinosaur">
           <div class="dino">
@@ -160,7 +160,7 @@ function renderContentsPage() {
   }
   filteredContents.forEach((content) => {
     contentsHTML += `<div class="problem-container">
-          <div class="upperpart"><a href="${content.link1}" target="_blank"><img src="images/Algorithmpage/${content.type}" />
+          <div class="upperpart"><a href="${content.link1}" target="_blank"><img src="../images/Algorithmpage/${content.type}" />
           </a></div>
           <div class="lowerpart">
             <a href="Algorithmexplanationpage.html?AlgorithmId=${content.id}">
@@ -169,7 +169,7 @@ function renderContentsPage() {
                 ${content.title}
               </div>
               <div class="problem-difficulty">
-                <img src="images/Algorithmpage/difficulty/difficulty${content.difficulty}.png" />
+                <img src="../images/Algorithmpage/difficulty/difficulty${content.difficulty}.png" />
               </div>
             </div>
             <div class="problem-tag">
